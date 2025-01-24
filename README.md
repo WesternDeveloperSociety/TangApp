@@ -1,8 +1,6 @@
-# Welcome to your Expo app 👋
+# Welcome👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
-
-## Get started
+## Set up
 
 1. Install dependencies
 
@@ -23,17 +21,41 @@ In the output, you'll find options to open the app in a
 - [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
 - [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Press `j` to open up the Native dev tools (debugger), `w` for the web app version. 
+We will be using Expo Go for development for now. 
 
-## Get a fresh project
+## Troubleshooting 
 
-When you're ready, run:
+### Failed to download remote update 
+
+If you are unable to run the app using the Expo Go QR Code and encounter an error like:
+
+`Java.io.IOException: Failed to download remote update`, you can try again using a wired connection, or run  
+```bash
+npx expo start --tunnel 
+```
+Alternative solutions (if `--tunnel` does not work):
+1. Disable Windows Defender firewall if you are on Windows:
+
+- Ensure both devices are on the same network 
+- In the terminal when you run `npx expo start` command, below the QR code you will see a message that displays `Metro waiting on exp://192.168.XX.XXX:PORT#`. Which is the IP:Port# being used to by expo. Keep this port # in mind.
+- Type and go to `Windows Security(looks like a blue shield)` in your Search Bar
+- Click on `Network Protection` > `Advanced Settings` > `Inbound Rules` > `New Rule` > `Port` > `TCP` > `Specific Port`
+- Find the port # that is used by Expo
+- Allow the connection and leave all checked 
+- Add Name/Description 
+
+2. Reinstall Expo app, restart computer and connection 
+
+- If there are any issues on Arch Linux, please lmk.
+
+### SDK version 
+- This app should be using Expo SDK 52, the newest version compatible with Expo Go. Install the latest version of Expo if it does not work:
 
 ```bash
-npm run reset-project
+npm install expo@latest
 ```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+in the root directory.
 
 ## Learn more
 
@@ -42,9 +64,4 @@ To learn more about developing your project with Expo, look at the following res
 - [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
 - [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
 
-## Join the community
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
