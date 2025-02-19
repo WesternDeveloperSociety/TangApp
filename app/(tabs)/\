@@ -1,9 +1,6 @@
-// I had too many issues rendering using a function, so I switched to a class
-
 import React from 'react';
 import { StatusBar, View, Dimensions, StyleSheet } from 'react-native';
 import MapView from 'react-native-maps';
-
 
 export default class HomeScreen extends React.Component {
 
@@ -19,11 +16,10 @@ export default class HomeScreen extends React.Component {
         <MapView
           style={styles.map}
           initialRegion={{
-            latitude: 43.004341,
+            latitude: 43.005341,
             longitude: -81.276023,
-            // effects zoom
-            latitudeDelta: 0.0015,
-            longitudeDelta: 0.0015,
+            latitudeDelta: 0.001,
+            longitudeDelta: 0.001,
           }}
         />
       </View>
