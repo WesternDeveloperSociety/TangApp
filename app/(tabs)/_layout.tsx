@@ -10,7 +10,9 @@ export default function TabLayout() {
       headerShown: false,
       tabBarActiveTintColor: '#ffd33d',
       tabBarStyle: {
-        backgroundColor: 'black'
+        backgroundColor: 'black',
+        borderTopWidth: 0, // Removes the white line on bottom tab
+        height: 72 // px value from Figma
       }
     }}>
       <Tabs.Screen
