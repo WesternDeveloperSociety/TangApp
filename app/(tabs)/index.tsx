@@ -1,7 +1,7 @@
 import React from 'react';
-import { StatusBar, View, Dimensions, StyleSheet } from 'react-native';
+import { StatusBar, View, Dimensions, StyleSheet, } from 'react-native';
 import MapView from 'react-native-maps';
-
+import Select from '../../components/ui/select';
 
 export default class HomeScreen extends React.Component {
 
@@ -13,7 +13,7 @@ export default class HomeScreen extends React.Component {
   
   render() {
     return (
-      <View style={styles.container}>
+      <View className="flex-1 justify-center items-center">
         <MapView
           style={styles.map}
           initialRegion={{
@@ -24,17 +24,13 @@ export default class HomeScreen extends React.Component {
             longitudeDelta: 0.0015,
           }}
         />
+        <Select/>
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
   map: {
     flex: 1,
     width: Dimensions.get('window').width,

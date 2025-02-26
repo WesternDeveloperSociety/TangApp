@@ -11,7 +11,7 @@ import { useRouter } from 'expo-router';
  * Height for robot icon + text: 24px
  */
 export default function Robots() {
-    const insets = useSafeAreaInsets();
+    const insets = useSafeAreaInsets(); // ensure top bar is not obstructed by notches or rounded edges
     const router = useRouter();
 
     return (
@@ -35,7 +35,7 @@ export default function Robots() {
                             {/* Available Robots added later, or else it doesn't scroll with list */}
                             {/* Robot text supposed to be text-base, text-lg looks better imo */}
                             <Pressable 
-                                onPress={() => router.push('/_not-found')} 
+                                onPress={() => router.push('/+not-found')} 
                                 className="bg-[#B3B3B3] rounded-full py-3 px-6 mx-[30px] flex-row items-center"
                             >
                                 <Image 

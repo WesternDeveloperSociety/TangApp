@@ -9,12 +9,17 @@ export default function Settings() {
     return (
         <View className="bg-black flex-1 p-4">
             {/* Header */}
+            <View className="mt-[30]">
             <Text className="text-center text-xl font-bold text-white">Settings</Text>
+            </View>
+            
+            {/* Divider, wrap a View around this for better View organization (apply flex) */}
+            <View className="border-t border-gray-700 mt-4" />
 
             {/* User Information & PFP */}
-            <View className="flex-row items-center mt-8">
+            <View className="flex-row items-center mt-2">
                 <Image // Placeholder for profile picture
-                    className="w-16 h-16 rounded-full mr-4"
+                    className="w-16 h-16 rounded-full mr-4 bg-blue-500"
                 />
                 <View>
                     <Text className="text-lg font-semibold text-white">Example User</Text>
