@@ -5,7 +5,7 @@ import { useRouter } from 'expo-router';
 export default function Select() {
     const router = useRouter();
     return(
-       <View className="bg-red-50 w-full rounded-full h-64">
+       <View className="w-full rounded-full h-64">
                 {/* Flatlist for potential pull-to-refresh */}
                 <FlatList
                     className="bg-backgroundPurple"
