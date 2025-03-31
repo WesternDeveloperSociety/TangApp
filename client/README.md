@@ -1,6 +1,6 @@
-# Welcome👋
+# Welcome 👋
 
-## Set up
+## Setting up the front end 
 
 1. Install dependencies
 
@@ -51,6 +51,11 @@ Alternative solutions (if `--tunnel` does not work):
 
 ### SDK version 
 - This app should be using Expo SDK 52, the newest version compatible with Expo Go. Install the latest version of Expo if it does not work:
+
+### npx expo start does not work; EPERM issue 
+- This means that expo is not able to update and edit your `.gitignore` when you run `npx expo start` inside client. To fix this, allow expo to overwrite changes inside your `.gitignore`, and make sure you have the proper permissions for the file.
+- On Windows: right click on `.gitignore` inside File Explorer, `Properties` -> `Security` -> Make sure user has full control permissions, grant yourself full permissions if not.
+- Then run `npx expo start --clear` to clear cache.
 
 ```bash
 npm install expo@latest
