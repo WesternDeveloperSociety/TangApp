@@ -24,7 +24,7 @@ export default class HomeScreen extends React.Component {
             longitudeDelta: 0.0015,
           }}
         />
-        <Select/>
+        <Select />
       </View>
     );
   }
