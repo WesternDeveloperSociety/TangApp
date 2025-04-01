@@ -1,2 +1,5 @@
 # ignore files for backend 
 .env
+# init node modules  
+node_modules/
+
